@@ -1,3 +1,81 @@
+<?php
+    session_start();
+    require("forAll.php");
+    $db=require_once("dbConfig.php");
+
+    if (isset($_POST['add'])){
+        if (isset($_SESSION['cart'])){
+            $item_array_id= array_column($_SESSION['cart'], 'product_ID');
+            if (in_array($_POST['product_ID'],$item_array_id)){
+                echo '<script>alert("Product is already added to the cart");</script>';
+            }
+            else{
+                $count=count($_SESSION['cart']);
+                $item_array= array(
+                    'product_ID' => $_POST['product_ID'],
+                    'product_name'=> $_POST['product_name'],
+                    'selling_price'=> $_POST['selling_price'],
+                    'quantity'=> $_POST['quantity']);
+                $_SESSION['cart'][$count]=$item_array;
+            }
+        }
+        else{
+            $item_array =array(
+                'product_ID' => $_POST['product_ID'],
+                'product_name'=> $_POST['product_name'],
+                'selling_price'=> $_POST['selling_price'],
+                'quantity'=> $_POST['quantity']);
+            $_SESSION['cart'][0]=$item_array;
+        }
+    }else{
+
+    }
+
+    if (isset($_POST['change'])){
+        foreach ($_SESSION['cart'] as $key => $value) {
+            if ($value['product_ID']==$_POST['product_ID']){
+                unset($_SESSION['cart'][$key]);
+                $count=count($_SESSION['cart']);
+                $item_array= array(
+                    'product_ID' => $_POST['product_ID'],
+                    'product_name'=> $_POST['product_name'],
+                    'selling_price'=> $_POST['selling_price'],
+                    'quantity'=> $_POST['quantity']);
+                $_SESSION['cart'][$count]=$item_array;
+            }
+        }
+
+    }
+    
+    if (isset($_POST['update'])){
+        foreach ($_SESSION['cart'] as $key => $value) {
+            if ($value['product_ID']==$_POST['id']){
+                unset($_SESSION['cart'][$key]);
+                $count=count($_SESSION['cart']);
+                $item_array= array(
+                    'product_ID' => $_POST['product_ID'],
+                    'product_name'=> $_POST['product_name'],
+                    'selling_price'=> $_POST['selling_price'],
+                    'quantity'=> $_POST['quantity']);
+                $_SESSION['cart'][$count]=$item_array;
+            }
+        }
+    }
+    if (isset($_GET['action'])){
+        if ($_GET['action']=='delete'){
+            foreach ($_SESSION['cart'] as $key => $value) {
+                if ($value['product_ID']==$_GET['id']){
+                    unset($_SESSION['cart'][$key]);
+                }
+            }
+        }
+        if ($_GET['action']=='empty'){
+            unset($_SESSION['cart']);
+        }
+    }
+
+     
+?>
 <div id="content" class="right">
         <h2>Shopping Cart</h2>
         <a href='shoppingcart.php?action=empty'>Empty Cart</a><br><br>
