@@ -76,6 +76,7 @@
 
      
 ?>
+
 <div id="content" class="right">
         <h2>Shopping Cart</h2>
         <a href='shoppingcart.php?action=empty'>Empty Cart</a><br><br>
