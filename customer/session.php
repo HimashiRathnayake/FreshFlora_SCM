@@ -1,3 +1,3 @@
 <?php 
 session_start();
-session_unset();
+$_SESSION['customer_ID']=1;

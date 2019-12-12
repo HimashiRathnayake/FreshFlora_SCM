@@ -16,7 +16,7 @@ if (isset($_SESSION['cart'])){
             
             <select name="payment_method">
                 <option value="Cash">Cash</option>
-                <option value="CreditCard">Credit Card</option>
+                <option value="Credit card">Credit Card</option>
             </select>
                 
                 <div class="cleaner h40"></div>
