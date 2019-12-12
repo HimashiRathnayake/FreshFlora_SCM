@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 require ('includes/header.php');
 require ('includes/sidebar.php');
 
@@ -30,9 +30,15 @@ if (isset($_SESSION['cart'])){
         </form>
             <p><a href="#"><img src="images/1311260370_paypal-straight.png" alt="paypal" align="middle" /></a>&nbsp;(recommended if you have a PayPal account. Fastest way to complete your order.)</p>
             <p><a href="#"><img src="images/flagship.jpg" alt="Flagship" align="middle" /></a>&nbsp;(free shipping for orders above Rs.5000/=)</p>
-<?php }else{?>
-    <h3>&nbsp&nbsp&nbsp You haven't add any products to the cart.</h3>
-<?php }?>
+<?php }elseif(isset($_GET['status'])){
+    if($_GET['status']=='success'){
+        echo "<h3>&nbsp&nbsp&nbsp Order has placed successfully.</h3>";
+    }
+}
+else{
+    echo "<h3>&nbsp&nbsp&nbsp You haven't add any products to the cart.</h3>";
+}?>
+
 <?php
 require("includes/footer.php");
 ?>

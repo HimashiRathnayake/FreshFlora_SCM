@@ -30,5 +30,5 @@ foreach ($_SESSION['cart'] as $key => $value) {
 }
 
 unset($_SESSION['cart']);
-header('Location: http://localhost/customer/order.php?status=success')
+header('Location: http://localhost/FreshFlora_SCM/customer/order.php?status=success');
 

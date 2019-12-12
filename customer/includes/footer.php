@@ -1,7 +1,5 @@
 <div class="cleaner h20"></div>
-    	<div class="blank_box">
-        	<a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a>
-        </div>    
+    
     </div>
     <div class="cleaner"></div>
 </div> <!-- END of main -->
