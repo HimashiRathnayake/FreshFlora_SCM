@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!-- templatemo 385 floral shop -->
 <!-- 
 Floral Shop Template 
@@ -65,8 +66,6 @@ function clearText(field)
                 <li><a href="products.php">Products</a></li>
                 <li><a href="shoppingcart.php">Cart</a></li>
                 <li><a href="order.php">Orders</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
             </ul>
             <div id="templatemo_search">
                 <form action="#" method="get">

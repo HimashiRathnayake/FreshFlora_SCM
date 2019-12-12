@@ -14,9 +14,9 @@
                 </div>
             </div>
             <div class="sidebar_box"><span class="bottom"></span>
-                <h3>Weekly Special</h3>   
-                <div class="Contact Us"> 
-                <h6><strong>Head Office</strong></h6>
+                <h3>Contact Us</h3>   
+                <div class="content special"> 
+                    <h6><strong>Head Office</strong></h6>
             No,21, <br />
             Peradeniya Road,<br />
             Kandy<br /><br />
