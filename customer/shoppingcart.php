@@ -73,8 +73,6 @@
             unset($_SESSION['cart']);
         }
     }
-
-     
 ?>
 
 <div id="content" class="right">
@@ -127,7 +125,7 @@
             </form>
         </table>
 		<div class="cleaner h20"></div>
-        <div class="right"><a href="checkout.html" class="button">Order</a></div>
+        <div class="right"><a href="checkout.php" name="order_button" class="button">Order</a></div>
         <div class="cleaner h20"></div>
             <?php
             }else{
