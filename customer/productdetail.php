@@ -1,3 +1,12 @@
+<?php
+    require("forAll.php");
+
+$product= $_GET['product'];
+$db=require_once("dbConfig.php");
+$query1 = "SELECT * FROM product where product_ID='".$product."'";
+$resultSet1 = mysqli_query($db, $query1);
+$result = mysqli_fetch_assoc($resultSet1);
+?>
 <div id="content" class="right">
           <h2>Product Details : </h2>
           <h3>Product Name: <?php echo $result['product_name'];?></h3>
