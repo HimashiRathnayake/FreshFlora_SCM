@@ -64,7 +64,7 @@ function clearText(field)
                 <li><a href="about.html">About</a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="shoppingcart.php">Cart</a></li>
-                <li><a href="Order.php">Orders</a></li>
+                <li><a href="order.php">Orders</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="faqs.html">FAQs</a></li>
             </ul>
