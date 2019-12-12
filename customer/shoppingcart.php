@@ -1,7 +1,8 @@
 <?php
     session_start();
-    require("forAll.php");
-    $db=require_once("dbConfig.php");
+    require("includes/header.php");
+    require("includes/sidebar.php");
+    $db=require_once("includes/dbConfig.php");
 
     if (isset($_POST['add'])){
         if (isset($_SESSION['cart'])){
@@ -126,7 +127,7 @@
         </table>
 		<div class="cleaner h20"></div>
         <div class="right"><a href="checkout.php" name="order_button" class="button">Order</a></div>
-        <div class="cleaner h20"></div>
+        
             <?php
             }else{
             ?>
@@ -136,12 +137,6 @@
             }
             ?>
         
-            
-        <div class="blank_box">
-        	<a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a>
-        </div>    
-    </div>
-    <div class="cleaner"></div>
-
-</body>
-</html>
+<?php           
+require("includes/footer.php");
+?>
