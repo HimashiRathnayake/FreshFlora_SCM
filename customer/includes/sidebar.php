@@ -15,14 +15,14 @@
             </div>
             <div class="sidebar_box"><span class="bottom"></span>
                 <h3>Weekly Special</h3>   
-                <div class="content special"> 
-                    <img src="images/templatemo_image_01.jpg" alt="Flowers" />
-                    <a href="#">Citrus Burst Bouquet</a>
-                    <p>
-                        Price:
-                        <span class="price normal_price">$160</span>&nbsp;&nbsp;
-                        <span class="price special_price">$100</span>
-                    </p>
+                <div class="Contact Us"> 
+                <h6><strong>Head Office</strong></h6>
+            No,21, <br />
+            Peradeniya Road,<br />
+            Kandy<br /><br />
+            
+			<strong>Phone:</strong> 010-440-5500<br />
+            <strong>Email:</strong> <a href="mailto:contact@company.com">freshfloara@company.com</a> <br />
             </div>
     </div>
 </div>
