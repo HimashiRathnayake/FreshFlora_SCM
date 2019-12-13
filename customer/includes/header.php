@@ -45,7 +45,6 @@ function clearText(field)
     else if (field.value == '') field.value = field.defaultValue;
     
 }
-
 </script>
 
 <script type="text/javascript" src="js/jquery-1-4-2.min.js"></script> 
@@ -69,7 +68,7 @@ function clearText(field)
                 <li><a href="order.php">Orders</a></li>
             </ul>
             <div id="templatemo_search">
-                <form action="#" method="get">
+                <form action="products.php" method="POST">
                   	<input type="text" value="Site Search" name="keyword" id="search_text" title="keyword" 
                   			onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
                   	<input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn" />
