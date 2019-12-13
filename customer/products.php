@@ -6,21 +6,27 @@ $db=require_once("includes/dbConfig.php");
 if (isset($_GET['type'])){
     $query1 = "SELECT * FROM product where product_type='".$_GET['type']."'";
     $resultSet1 = mysqli_query($db, $query1);
+    echo "<div id='content' class='right'>
+		<h2>".$_GET['type']."</h2>
+        <p>Order fresh,beautiful ".$_GET['type']." with fresh flora. We have various kinds of ".$_GET['type']." for you. Order today to get an awesom experience with us. We deliver fresh flowers islandwide and free delivery within seven days. (Try to place the order at least seven days prior to the date you want us to deliver.)</p>";
+        
 }
 elseif (isset($_POST['Search'])){
     $query1 = "SELECT * FROM product where product_name Like '%".$_POST['keyword']."%'";
     $resultSet1 = mysqli_query($db, $query1);
+    echo "<div id='content' class='right'><h2>Search Results</h2>";
+     
 }
 else{
     $query1 = "SELECT * FROM product";
-    $resultSet1 = mysqli_query($db, $query1);
-}
-?>
-
-<div id="content" class="right">
+    $resultSet1 = mysqli_query($db, $query1); 
+    echo "<div id='content' class='right'>
 		<h2>Products</h2>
-        <p>Cras aliquam, mi nec imperdiet volutpat, ligula est consequat odio, eu auctor urna augue eu quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum nec nunc ac hendrerit. Morbi lacinia placerat diam sit amet fringilla. Integer accumsan suscipit suscipit. Mauris non nunc sit amet turpis pharetra mattis. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
+        <p>Order fresh,beautiful flowers with fresh flora. We have various kinds of flowers for you. Order today to get an awesom experience with us. We deliver fresh flowers islandwide and free delivery within seven days. (Try to place the order at least seven days prior to the date you want us to deliver.)</p>";
         
+}?>
+
+
         <?php foreach ($resultSet1 as $value) {
         ?>
         <div class="product_box">
