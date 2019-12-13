@@ -7,6 +7,10 @@ if (isset($_GET['type'])){
     $query1 = "SELECT * FROM product where product_type='".$_GET['type']."'";
     $resultSet1 = mysqli_query($db, $query1);
 }
+elseif (isset($_POST['Search'])){
+    $query1 = "SELECT * FROM product where product_name Like '%".$_POST['keyword']."%'";
+    $resultSet1 = mysqli_query($db, $query1);
+}
 else{
     $query1 = "SELECT * FROM product";
     $resultSet1 = mysqli_query($db, $query1);
