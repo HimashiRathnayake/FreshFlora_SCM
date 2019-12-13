@@ -33,7 +33,9 @@ h6 { font-size: 12px }
 
 .left { float:left }
 .right { float:right }
-
+.right::first-letter{
+    text-transform: uppercase;
+}
 em { color: #e1d620 }
 
 .img_fl { float: left; margin: 3px 15px 5px 0 }
