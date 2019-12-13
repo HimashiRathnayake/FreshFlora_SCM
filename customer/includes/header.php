@@ -1,4 +1,9 @@
-<?php session_start();?>
+<?php 
+session_start();
+if (!isset($_SESSION['customer_ID'])){
+    header('Location:http://localhost/FreshFlora_SCM/codes/index.html');
+}
+?>
 <!-- templatemo 385 floral shop -->
 <!-- 
 Floral Shop Template 
@@ -66,6 +71,11 @@ function clearText(field)
                 <li><a href="products.php">Products</a></li>
                 <li><a href="shoppingcart.php">Cart</a></li>
                 <li><a href="order.php">Orders</a></li>
+                <li><a href="#">LoggedIn</a>
+                    <ul> 
+						<li><a href = "logout.php">Logout</a></li>
+                    </ul>
+                </li>
             </ul>
             <div id="templatemo_search">
                 <form action="products.php" method="POST">

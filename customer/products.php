@@ -19,7 +19,7 @@ else{
 
 <div id="content" class="right">
 		<h2>Products</h2>
-        <p>Cras aliquam, mi nec imperdiet volutpat, ligula est consequat odio, eu auctor urna augue eu quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum nec nunc ac hendrerit. Morbi lacinia placerat diam sit amet fringilla. Integer accumsan suscipit suscipit. Mauris non nunc sit amet turpis pharetra mattis. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
+        <p>Order fresh,beautiful flowers with fresh flora. We have various kinds of flowers for you. Order today. We deliver fresh flowers islandwide and free delivery within seven days. </p>
         
         <?php foreach ($resultSet1 as $value) {
         ?>
