@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var DOMAIN = "http://localhost/flora_project";
+	var DOMAIN = "http://localhost/FreshFlora_SCM/admin";
 	
 	//add product
 	$("#product_form").on("submit",function(){
