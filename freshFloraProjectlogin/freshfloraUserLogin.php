@@ -22,7 +22,8 @@ if(isset($_POST['login']))
     $ret=mysqli_fetch_array($query);
     if($ret>0){
       $_SESSION['uid']=$ret['userid'];
-	    echo 'alert("correct!")';
+      echo ($_SESSION['uid']);
+      header("Location: http://localhost/FreshFlora_SCM/customer/home.php");
     }
     else{
       $msg="Invalid Details.";

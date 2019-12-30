@@ -1,7 +1,7 @@
 <?php
-$mysql_host='127.0.0.1:3307';
+$mysql_host='localhost';
 $mysql_user='root';
-$mysql_password='test';
+$mysql_password='';
 $mysql_database='db_scm';
 
 $con = mysqli_connect($mysql_host, $mysql_user, $mysql_password, $mysql_database);

@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if (!isset($_SESSION['customer_ID'])){
+if (!isset($_SESSION['uid'])){
     header('Location:http://localhost/FreshFlora_SCM/codes/index.html');
 }
 ?>
@@ -66,7 +66,7 @@ function clearText(field)
     	<div id="site_title"><a href="#">Floral Shop</a></div>
         <div id="templatemo_menu" class="ddsmoothmenu">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.php">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="shoppingcart.php">Cart</a></li>
