@@ -31,7 +31,7 @@ $result = mysqli_fetch_assoc($resultSet1);
                         else{
                             echo "Not in stock";
                         }?></td>
-                        <td><strong>In Stock</strong></td>
+                        <td><strong>In Stock(<?php echo $result['quantity']?>)</strong></td>
                     </tr>
                     <tr><td>Quantity</td><td><input name="quantity" type="text" value="1" size="6" maxlength="2" /></td></tr>
                 </table>

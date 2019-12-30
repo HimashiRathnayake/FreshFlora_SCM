@@ -9,16 +9,20 @@ include_once("manage.php");
 //Add Product
 if (isset($_POST["added_date"]) AND isset($_POST["product_name"])) {
 	$obj = new DBOperation();
+	$img=file_get_contents($_FILES["image"]["tmp_name"]);
 	$result = $obj->addProduct(
 							$_POST["product_name"],
+							$_POST["product_type"],
 							$_POST["buying_price"],
 							$_POST["selling_price"],
 							$_POST["quantity"],
 							$_POST["size"],
-							$_POST["image"],
+							$img,
 							$_POST["added_date"]);
 							
-	echo $result;
+	if ($result=='NEW_PRODUCT_ADDED'){
+		header('Location: ../dashboard.php');
+	}
 	exit();
 }
 

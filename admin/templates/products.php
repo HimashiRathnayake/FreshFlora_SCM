@@ -9,7 +9,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <form id="product_form" onsubmit="return false">
+        
+        <form id="product_form" method='post' action='includes/process.php' enctype='multipart/form-data'>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label>Date</label>
@@ -18,6 +19,10 @@
             <div class="form-group col-md-6">
               <label>Product Name</label>
               <input type="text" class="form-control" name="product_name" id="product_name" placeholder="Enter Product Name" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Product Type</label>
+              <input type="text" class="form-control" name="product_type" id="product_type" placeholder="Enter Product Type" required>
             </div>
           </div>
           <div class="form-group">
@@ -43,6 +48,7 @@
           
           <button type="submit" class="btn btn-success">Add Product</button>
         </form>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

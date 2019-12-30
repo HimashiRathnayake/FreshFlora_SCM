@@ -19,7 +19,7 @@ class Manage
 		$a = $this->pagination($this->con,$table,$pno,5);
 		
 		if($table == "product"){
-			$sql = "SELECT p.product_ID,p.product_name,p.selling_price,p.buying_price,p.quantity,p.size,p.image,p.added_date,p.p_status FROM product p ".$a["limit"];
+			$sql = "SELECT p.product_ID,p.product_name,p.selling_price,p.buying_price,p.quantity,p.size,p.image FROM product p ".$a["limit"];
 		}
 		$result = $this->con->query($sql) or die($this->con->error);
 		$rows = array();
