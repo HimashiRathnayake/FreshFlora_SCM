@@ -125,7 +125,7 @@
             </form>
         </table>
 		<div class="cleaner h20"></div>
-        <div class="right"><a href="checkout.php" name="order_button" class="button">Order</a></div>
+        <div class="right"><a href="order.php" name="order_button" class="button">Order</a></div>
         
             <?php
             }else{

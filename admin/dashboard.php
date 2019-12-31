@@ -23,9 +23,9 @@
 				  <img class="card-img-top mx-auto" style="width:60%;" src="./images/user.png" alt="Card image cap">
 				  <div class="card-body">
 				    <h4 class="card-title">Profile Info</h4>
-				    <p class="card-text"><i class="fa fa-user">&nbsp;</i>ABCD</p>
+				    <!-- <p class="card-text"><i class="fa fa-user">&nbsp;</i>ABCD</p> -->
 				    <p class="card-text"><i class="fa fa-user">&nbsp;</i>Admin</p>
-				    <a href="edit_profile.php" class="btn btn-primary">Edit Profile</a>
+				    <!-- <a href="edit_profile.php" class="btn btn-primary">Edit Profile</a> -->
 				  </div>
 				</div>
 			</div>
@@ -40,9 +40,9 @@
 						<div class="col-sm-6">
 							<div class="card">
 						      <div class="card-body">
-						        <h4 class="card-title">New Orders</h4>
-						        <p class="card-text">Here you can make invoices and create new orders</p>
-						        <a href="new_order.php" class="btn btn-primary">New Orders</a>
+						        <h4 class="card-title">Orders</h4>
+						        <p class="card-text">Here you can view orders and schedule them</p>
+						        <a href="trainSchedule.php" class="btn btn-primary">Orders</a>
 						      </div>
 						    </div>
 						</div>
@@ -68,7 +68,7 @@
 			</div>
 		</div>
 	</div>
-
+	
 	 <?php
 	//Products Form
 	include_once("./templates/products.php");

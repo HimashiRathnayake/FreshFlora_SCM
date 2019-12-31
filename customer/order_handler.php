@@ -14,7 +14,7 @@ $payment_method=$_POST['payment_method'];
 $order_date=date("Y-m-d");
 
 //If error: Check in databse orderId should be auto increment
-$query1 = "INSERT into orders (customer_ID,payment,payment_method,order_date) values ('".$customer_ID."','".$payment."','".$payment_method."','".$order_date."')";
+$query1 = "INSERT into orders (customer_ID,payment,payment_method,order_date,order_status) values ('".$customer_ID."','".$payment."','".$payment_method."','".$order_date."','placed')";
 $resultSet1 = mysqli_query($db, $query1);
 
 $query2 = "SELECT * FROM orders ORDER BY order_ID DESC LIMIT 1";
