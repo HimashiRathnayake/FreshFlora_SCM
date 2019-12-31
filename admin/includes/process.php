@@ -3,7 +3,11 @@ include_once("../database/constants.php");
 
 include_once("DBOperation.php");
 include_once("manage.php");
+$db=require_once("dbConfig.php");
 
+$query1 = "SELECT p.product_ID,p.product_name,p.selling_price,p.buying_price,p.quantity,p.size,p.image FROM product p ";
+
+$resultSet1 = mysqli_query($db, $query1);
 //For Registration Processsing
 //For Login Processing
 //Add Product
@@ -21,7 +25,7 @@ if (isset($_POST["added_date"]) AND isset($_POST["product_name"])) {
 							$_POST["added_date"]);
 							
 	if ($result=='NEW_PRODUCT_ADDED'){
-		header('Location: ../dashboard.php');
+		header('Location: ../manage_product.php');
 	}
 	exit();
 }
@@ -30,13 +34,14 @@ if (isset($_POST["added_date"]) AND isset($_POST["product_name"])) {
 //----------------Products---------------------
 
 if (isset($_POST["manageProduct"])) {
-	$m = new Manage();
-	$result = $m->manageRecordWithPagination("product",$_POST["pageno"]);
-	$rows = $result["rows"];
-	$pagination = $result["pagination"];
-	if (count($rows) > 0) {
-		$n = (($_POST["pageno"] - 1) * 5)+1;
-		foreach ($rows as $row) {
+	// $m = new Manage();
+	// $result = $m->manageRecordWithPagination("product",$_POST["pageno"]);
+	// $rows = $result["rows"];
+	// $pagination = $result["pagination"];
+	// if (count($rows) > 0) {
+	// 	$n = (($_POST["pageno"] - 1) * 5)+1;
+	$n=1;
+		foreach ($resultSet1 as $row) {
 			?>
 				<tr>
 			        <td><?php echo $n; ?></td>
@@ -46,9 +51,9 @@ if (isset($_POST["manageProduct"])) {
 			        <td><?php echo $row["quantity"]; ?></td>
 			        <td><?php echo $row["size"]; ?></td>
 					<td><?php echo '<img src = "data:image/product/png;base64,'.base64_encode($row["image"]).'" width="40" hight="40"/>'; ?></td>
-			        <td><?php echo $row["added_date"]; ?></td>
+			        <!-- <td><?php //echo $row["added_date"]; ?></td> -->
 					
-			        <td><a href="#" class="btn btn-success btn-sm">Active</a></td>
+			        <!-- <td><a href="#" class="btn btn-success btn-sm">Active</a></td> -->
 			        <td>
 			        	<a href="#" did="<?php echo $row['product_ID']; ?>" class="btn btn-danger btn-sm del_product">Delete</a>
 			        	<a href="#" eid="<?php echo $row['product_ID']; ?>" data-toggle="modal" data-target="#form_products" class="btn btn-info btn-sm edit_product">Edit</a>
@@ -58,11 +63,11 @@ if (isset($_POST["manageProduct"])) {
 			$n++;
 		}
 		?>
-			<tr><td colspan="5"><?php echo $pagination; ?></td></tr>
+			<!-- <tr><td colspan="5"><?php echo $pagination; ?></td></tr> -->
 		<?php
 		exit();
 	}
-}
+
 
 //Delete 
 if (isset($_POST["deleteProduct"])) {

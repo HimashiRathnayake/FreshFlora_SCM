@@ -16,7 +16,7 @@ class Manage
 	}
 
 	public function manageRecordWithPagination($table,$pno){
-		$a = $this->pagination($this->con,$table,$pno,5);
+		$a = $this->pagination($this->con,$table,$pno,100);
 		
 		if($table == "product"){
 			$sql = "SELECT p.product_ID,p.product_name,p.selling_price,p.buying_price,p.quantity,p.size,p.image FROM product p ".$a["limit"];
@@ -33,8 +33,8 @@ class Manage
 	}
 
 	private function pagination($con,$table,$pno,$n){
-		$query = $con->query("SELECT COUNT(*) as rows FROM ".$table);
-		$row = mysqli_fetch_assoc($query);
+		$row = $con->query("SELECT COUNT(*) as rows FROM ".$table) ;
+		//$row = mysqli_fetch_assoc($query);
 		//$totalRecords = 100000;
 		$pageno = $pno;
 		$numberOfRecordsPerPage = $n;

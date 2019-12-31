@@ -16,7 +16,11 @@
 	<!-- Navbar -->
 	<?php include_once("./templates/header.php"); ?>
 	<br/><br/>
+	
 	<div class="container">
+	<h3>Products</h3>
+	<!-- <button>Add new Product</button> -->
+	<a href="#" data-toggle="modal" data-target="#product_form" class="btn btn-primary">Add New Product</a>
 		<table class="table table-hover table-bordered">
 		    <thead>
 		      <tr>
@@ -27,9 +31,7 @@
 		        <th>quantity</th>
 				<th>size</th>
 				<th>image</th>
-		        <th>Added Date</th>
-		        <th>Status</th>
-		        <th>Action</th>
+				
 		      </tr>
 		    </thead>
 		    <tbody id="get_product">
@@ -41,8 +43,8 @@
 
 	<?php
 		include_once("./templates/update_products.php");
-	?>
-	
+		include_once("./templates/products.php");
+	 ?>
 	
 </body>
 </html>

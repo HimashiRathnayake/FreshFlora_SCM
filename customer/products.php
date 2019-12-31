@@ -4,7 +4,7 @@ require("includes/sidebar.php");
 
 $db=require_once("includes/dbConfig.php");
 if (isset($_GET['type'])){
-    $query1 = "SELECT * FROM product where product_type='".$_GET['type']."'";
+    $query1 = "SELECT * FROM product where type='".$_GET['type']."'";
     $resultSet1 = mysqli_query($db, $query1);
     echo "<div id='content' class='right'>
 		<h2>".$_GET['type']."</h2>

@@ -18,7 +18,7 @@ class DBOperation
 
 	public function addProduct($product_name,$product_type,$buying_price,$selling_price,$quantity,$size,$image,$added_date){
 		$pre_stmt = $this->con->prepare("INSERT INTO product
-			(product_name,buying_price,selling_price,quantity,size,image,product_type)
+			(product_name,buying_price,selling_price,quantity,size,image,type)
 			 VALUES (?,?,?,?,?,?,?)");
 		$status = 1;
 		$pre_stmt->bind_param("sddidss",$product_name,$buying_price,$selling_price,$quantity,$size,$image,$product_type);

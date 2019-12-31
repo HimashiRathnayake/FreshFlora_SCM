@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="form_products" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="product_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -12,6 +12,10 @@
         
         <form id="product_form" method='post' action='includes/process.php' enctype='multipart/form-data'>
           <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Date</label>
+              <input type="text" class="form-control" name="added_date" id="added_date" value="<?php echo date("Y-m-d"); ?>" readonly/>
+            </div>
             <div class="form-group col-md-6">
               <label>Product Name</label>
               <input type="text" class="form-control" name="product_name" id="product_name" placeholder="Enter Product Name" required>
