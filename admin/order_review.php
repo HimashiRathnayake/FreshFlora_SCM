@@ -30,8 +30,7 @@
                           ?>  
                      ]);  
                 var options = {  
-                      title: 'Percentage of ordered products',
-                      //background: url(frame7.jpg) no-repeat center center fixed, 
+                      title: 'Percentage of ordered products', 
                       backgroundColor: '#f5f5f0',
                       is3D:true,  
                       pieHole: 0  
