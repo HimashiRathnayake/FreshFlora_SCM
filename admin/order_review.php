@@ -8,7 +8,7 @@
  $res = mysqli_query($connect, $mpp);
  $row = mysqli_fetch_array($res);
  $pname = $row['p_name'];
- echo $pname
+ echo $pname;
  ?>  
  <!DOCTYPE html>  
  <html>  
