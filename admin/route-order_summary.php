@@ -1,21 +1,22 @@
 <?php  
- $connect = mysqli_connect("localhost", "root", "", "scm_db");  
- $query = "SELECT city, destination, count(distinct order_ID) as number FROM customer natural join orders natural join order_details natural join store_route on customer.route_ID = store_route.route_ID group by route_ID order by number DESC";  
+ $connect = mysqli_connect("localhost", "root", "", "db_scm");  
+ $query =  "SELECT destination,city, count(distinct order_ID) as number from orders natural join order_details natural join customer natural join route natural join route area natural join store_route natural join store group by route_ID order by route_ID" ; 
  $result = mysqli_query($connect, $query); 
  ?>
  <head>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
- <table cellspacing="20">
+ <table>
  <tr>
-	<th>route id</th>
+	<th>Route</th>
 	<th>Number of orders</th>
 	</tr>
+ 
  <?php foreach ($result as $value){
 	?>
 	
 	<tr>
-	<td><?php echo $value["route_ID"]; ?></td>
+	<td><?php echo $value["city"]."-".$value["destination"]; ?></td>
 	<td><?php echo $value["number"]; ?></td>
 	</tr>
 	<?php 

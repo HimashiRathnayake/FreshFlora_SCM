@@ -1,14 +1,12 @@
-
-
 <?php  
- $connect = mysqli_connect("localhost", "root", "", "db_scm");  
+ $connect = mysqli_connect("localhost", "root", "", "scm_db");  
  $query = "SELECT product_name, sum(quantity_ordered) as number FROM order_details, product where product.product_ID = order_details.product_ID GROUP BY order_details.product_ID order by number DESC";  
- $mpp = "SELECT most_ordered_product() as p_name";
+ $mpp = "SELECT most_popular_product";
  $result = mysqli_query($connect, $query); 
- $res = mysqli_query($connect, $mpp);
- $row = mysqli_fetch_array($res);
- $pname = $row['p_name'];
- ?>  
+ $res = mysqli_query($connect, $mpp); 
+ ?> 
+<div> <?php echo $res ?></div>
+ 
  <!DOCTYPE html>  
  <html>  
       <head>  
@@ -31,8 +29,9 @@
                      ]);  
                 var options = {  
                       title: 'Percentage of ordered products',
-                      //background: url(frame7.jpg) no-repeat center center fixed, 
-                      backgroundColor: '#f5f5f0',
+					  //background: url(frame7.jpg) no-repeat center center fixed,
+					  backgroundColor: '#E4E4E4',
+					  opacity: 0,
                       is3D:true,  
                       pieHole: 0  
                      };  
@@ -44,14 +43,13 @@
            </script>  
       </head>  
       <body>  
-           <br /><br />  
+           <br /><br /> 
            <div style="width:1000px;">  
-                <h1 style = "color :#99004d"; align="center" >Summary of orders by products</h1>
-                <h4 style = "color :#99004d"> Most ordered product : <?php echo $pname;?></h4>   
+                <h3 align="center" color ="pink">Summary of orders by products</h3>  
                 <br />  
-                <div id="piechart" style="width: 800px; height: 750px;"></div>  
+                <div id="piechart" style="width: 1000px; height: 800px;"></div>  
            </div> 
 
 		   
       </body>  
- </html>  
+ </html>

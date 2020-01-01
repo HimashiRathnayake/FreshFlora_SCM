@@ -4,9 +4,9 @@ include('includes/dbconnection.php');
 
 function loadarea(){ 
   //$options="<option>Ambalangoda</option>"."<option>Hikkaduwa</option>";
-  $mysql_host='127.0.0.1:3307';
+  $mysql_host='localhost';
   $mysql_user='root';
-  $mysql_password='test';
+  $mysql_password='';
   $mysql_database='db_scm';
 
   $con = mysqli_connect($mysql_host, $mysql_user, $mysql_password, $mysql_database);
@@ -38,7 +38,7 @@ if(isset($_POST['submit']) )
       
       $Email=$_POST['Email'];
       $Password=$_POST['Password'];
-
+      $Password=md5(Password);
       
 
     

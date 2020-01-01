@@ -8,6 +8,8 @@ if(isset($_POST['login']))
     $Category=$_POST['Category'];
     $Email=$_POST['Email'];
     $Password=$_POST['Password'];
+    $Password = md5(Password);
+    
 
     if($Category=='Customer'){
       $query=mysqli_query($con,"select customer_ID as userid from customer where  email='$Email' && password='$Password'  ");
