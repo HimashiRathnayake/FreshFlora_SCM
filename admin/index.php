@@ -41,8 +41,8 @@
 							<div class="card">
 						      <div class="card-body">
 						        <h4 class="card-title">Orders</h4>
-						        <p class="card-text">Here you can view orders and schedule them</p>
-						        <a href="trainSchedule.php" class="btn btn-primary">Orders</a>
+						        <p class="card-text">Here you can view orders and schedule them into trains</p>
+						        <a href="schedule_orders.php" class="btn btn-primary">Schedule</a>
 						      </div>
 						    </div>
 						</div>
