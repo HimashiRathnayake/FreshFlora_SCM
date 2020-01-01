@@ -68,13 +68,13 @@ function clearText(field)
 				<li><a href="freshfloraProjectlogin/freshfloraUserLogin.php">Log in</a></li>
                 
             </ul>
-            <div id="templatemo_search">
+            <!-- <div id="templatemo_search">
                 <form action="#" method="get">
                   	<input type="text" value="Site Search" name="keyword" id="keyword" title="keyword" 
                   			onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
                   	<input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn" />
                 </form>
-            </div>
+            </div> -->
             <br style="clear: left" />
         </div> <!-- end of templatemo_menu -->
 

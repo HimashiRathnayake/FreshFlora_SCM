@@ -80,8 +80,8 @@ function clearText(field)
                 
             </ul>
             <div id="templatemo_search">
-                <form action="#" method="get">
-                  	<input type="text" value="Site Search" name="keyword" id="keyword" title="keyword" 
+                <form action="products.php" method="POST">
+                  	<input type="text" value="Site Search" name="keyword" id="search_text" title="keyword" 
                   			onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
                   	<input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn" />
                 </form>
