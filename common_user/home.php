@@ -10,7 +10,7 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
 <title>Floral HTML CSS Template</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="css/styleforall.css" rel="stylesheet" type="text/css" />
 
 <link rel="stylesheet" href="css/orman.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
@@ -60,14 +60,21 @@ function clearText(field)
     	<div id="site_title"><a href="#">Fresh flora online Floral Shop</a></div>
         <div id="templatemo_menu" class="ddsmoothmenu">
             <ul>
-                <li><a href="index.html" class="selected">Home</a></li>
+            
+            <li><a href="home.php">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="signin.html">Sign in</a></li>	
-				<li><a href="login.html">Log in</a></li>
+                <li><a href="products.php">Products</a></li>
+                <li><a href="signin.php">Sign in</a></li>	
+				<li><a href="login.php">Log in</a></li>
                 
             </ul>
-            
+            <div id="templatemo_search">
+                <form action="#" method="get">
+                  	<input type="text" value="Site Search" name="keyword" id="keyword" title="keyword" 
+                  			onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+                  	<input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn" />
+                </form>
+            </div>
             <br style="clear: left" />
         </div> <!-- end of templatemo_menu -->
 
@@ -105,13 +112,13 @@ function clearText(field)
     	<div class="sidebar_box"><span class="bottom"></span>
             <h3>Categories</h3>   
             <div class="content"> 
-                <ul class="sidebar_list">
-                    <li><a href="#">Rose</a></li>
-                    <li><a href="#">Anthurium</a></li>
-					<li><a href="#">Lily</a></li>
-					<li><a href="#">Orchid</a></li>
-                    <li><a href="#">Carnation</a></li>
-                </ul>
+            <ul class="sidebar_list">
+                    <li><a href="products.php?type=rose">Rose</a></li>
+                        <li><a href="products.php?type=anthurium">Anthurium</a></li>
+                        <li><a href="products.php?type=lily">Lily</a></li>
+                        <li><a href="products.php?type=orchid">Orchid</a></li>
+                        <li><a href="products.php?type=carnation">Carnation</a></li>
+                    </ul>
             </div>
         </div>
         <div class="sidebar_box"><span class="bottom"></span>
@@ -136,28 +143,28 @@ function clearText(field)
 		<p>Celebrate your special moments with Fresh Flora. High quality flowers with low prices! </p>
         
         <div class="product_box">
-            <a href="productdetail.html"><img src="my images/rose_home1.jpg" alt="floral set 1" /></a>
+            <a href="products.php?type=rose"><img src="my images/rose_home1.jpg" alt="floral set 1" /></a>
       		<h3>Roses</h3>
         </div> 
        	
         <div class="product_box">
-            <a href="productdetail.html"><img src="my images/anth_home1.jpg" alt="flowers 2" /></a>
+            <a href="products.php?type=anthurium"><img src="my images/anth_home1.jpg" alt="flowers 2" /></a>
             <h3>Anthuriums</h3>
         </div>
 		
         <div class="product_box">
-            <a href="productdetail.html"><img src="my images/lily_home1.jpg" alt="floral 3" /></a>
+            <a href="products.php?type=lily"><img src="my images/lily_home1.jpg" alt="floral 3" /></a>
             <h3>Lilies</h3>
         </div>
       	
         <div class="product_box no_margin_right">
-            <a href="productdetail.html"><img src="my images/orch_home3.jpg" alt="flowers 4" /></a>
+            <a href="products.php?type=orchid"><img src="my images/orch_home3.jpg" alt="flowers 4" /></a>
             <h3>Orchids</h3>
             
         </div>
         
         <div class="product_box">
-            <a href="productdetail.html"><img src="my images/car_home1.jpg" alt="floral set 5" /></a>
+            <a href="products.php?type=carnation"><img src="my images/car_home1.jpg" alt="floral set 5" /></a>
             <h3>Carnations</h3>
         </div>
 		
