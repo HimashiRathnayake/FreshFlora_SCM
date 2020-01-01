@@ -46,7 +46,7 @@
       <body>  
            <br /><br />  
            <div style="width:1000px;">  
-                <h1 style = color :"pink; align="center" >Summary of orders by products</h1>
+                <h1 style = "color :pink"; align="center" >Summary of orders by products</h1>
                 <h4> Most ordered product : <?php echo $pname;?></h4>   
                 <br />  
                 <div id="piechart" style="width: 800px; height: 750px;"></div>  
