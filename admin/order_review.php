@@ -3,7 +3,7 @@
 <?php  
  $connect = mysqli_connect("localhost", "root", "", "scm_db");  
  $query = "SELECT product_name, sum(quantity_ordered) as number FROM order_details, product where product.product_ID = order_details.product_ID GROUP BY order_details.product_ID order by number DESC";  
- $mpp = "CALL most_popular_product";
+ $mpp = "SELECT most_popular_product";
  $result = mysqli_query($connect, $query); 
  $res = mysqli_query($connect, $mpp); 
  ?>  
@@ -43,7 +43,8 @@
       <body>  
            <br /><br />  
            <div style="width:1000px;">  
-                <h1 align="center" style = color :"pink;>Summary of orders by products</h1>  
+                <h1 style = color :"pink; align="center" >Summary of orders by products</h1>
+                <?php echo "Most ordered product :".$res?>   
                 <br />  
                 <div id="piechart" style="width: 800px; height: 750px;"></div>  
            </div> 
