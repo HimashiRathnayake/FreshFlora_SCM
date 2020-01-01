@@ -56,7 +56,7 @@ if (isset($_POST["manageProduct"])) {
 			        <!-- <td><a href="#" class="btn btn-success btn-sm">Active</a></td> -->
 			        <td>
 			        	<a href="#" did="<?php echo $row['product_ID']; ?>" class="btn btn-danger btn-sm del_product">Delete</a>
-			        	<a href="#" eid="<?php echo $row['product_ID']; ?>" data-toggle="modal" data-target="#form_products" class="btn btn-info btn-sm edit_product">Edit</a>
+			        	<a href="#" data-id="<?php echo $row['product_ID']; ?>" data-toggle="modal" data-target="#update_product_form" class="btn btn-info btn-sm edit_product">Edit</a>
 			        </td>
 			      </tr>
 			<?php
@@ -104,3 +104,6 @@ if (isset($_POST["update_product"])) {
 
 
 ?>
+<script type='text/javascript'>
+$resultSe
+</script>
