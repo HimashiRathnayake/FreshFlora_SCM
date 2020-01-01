@@ -25,9 +25,12 @@
   <br>
   <h2>Reports</h2><br>
   <button type="button" class="btn btn-outline-primary">Quarterly sales report</button><br><br>
-  <button type="button" class="btn btn-outline-primary">Items with most orders </button><br><br>
-  <button type="button" class="btn btn-outline-primary">Sales report categorized according to main cities and routes</button><br><br>
-  <button type="button" class="btn btn-outline-primary" onclick="location.href='http://localhost/FreshFlora_SCM/admin/driver_truck_report.php'">Working Hours of Drivers/ Driver Assistants and Used hours of Trucks</button><br><br>
+  <button type="button" class="btn btn-outline-primary" onclick="location.href='http://localhost/FreshFlora_SCM/admin/order_review.php'">Items with most orders </button><br><br>
+  <button type="button" class="btn btn-outline-primary" onclick="location.href='http://localhost/FreshFlora_SCM/admin/city_order_summary.php'">Sales report categorized according to main cities</button>
+  <button type="button" class="btn btn-outline-primary" onclick="location.href='http://localhost/FreshFlora_SCM/admin/route-order_summary.php'">Sales report categorized according to main routes</button><br><br>
+  <button type="button" class="btn btn-outline-primary" onclick="location.href='http://localhost/FreshFlora_SCM/admin/drivers_report.php'">Working Hours of Drivers</button>
+  <button type="button" class="btn btn-outline-primary" onclick="location.href='http://localhost/FreshFlora_SCM/admin/driver_assistants_report.php'">Working Hours of Driver Assistants</button>
+  <button type="button" class="btn btn-outline-primary" onclick="location.href='http://localhost/FreshFlora_SCM/admin/trucks_report.php'">Used hours of Trucks</button><br><br>
   <button type="button" class="btn btn-outline-primary" onclick="location.href='http://localhost/FreshFlora_SCM/admin/customer_order_report.php'">Customer - Order Report</button><br><br>
  
 </div>

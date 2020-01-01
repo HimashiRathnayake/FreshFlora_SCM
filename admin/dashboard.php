@@ -60,9 +60,9 @@
 				<div class="card">
 						<div class="card-body">
 						<h4 class="card-title">Products</h4>
-						<p class="card-text">Here you can manage your products and you add new products</p>
-						<a href="#" data-toggle="modal" data-target="#form_products" class="btn btn-primary">Add</a>
-						<a href="manage_product.php" class="btn btn-primary">Manage</a>
+						<p class="card-text">Here you can add and manage your products and you add new products</p>
+						<!-- <a href="#" data-toggle="modal" data-target="#form_products" class="btn btn-primary">Add</a> -->
+						<a href="manage_product.php" class="btn btn-primary">Go</a>
 					</div>
 				</div>
 			</div>

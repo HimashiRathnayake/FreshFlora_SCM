@@ -15,6 +15,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="reports.php">Reports <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="schedule_orders.php">Schedule <span class="sr-only">(current)</span></a>
+      </li>
       
         
             <li class="nav-item active">

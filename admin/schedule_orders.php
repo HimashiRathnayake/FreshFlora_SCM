@@ -1,6 +1,11 @@
 <?php
 $db=require_once("includes/dbConfig.php");
 
+$current_time=date("h:i:sa");
+if ($current_time=="00:00:00"){
+  $query6 = "UPDATE train SET remaining_capacity=train_capacity";
+  $resultSet6 = mysqli_query($db, $query6);
+}
 $query1 = "SELECT order_ID, concat(first_name,' ',last_name) as name ,area,order_date FROM orders natural join customer where order_status='placed'";
 $resultSet1 = mysqli_query($db, $query1);
 

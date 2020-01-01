@@ -13,4 +13,9 @@ $resultSet1 = mysqli_query($db, $query3);
 
 $query1 = "UPDATE orders SET order_status='shipped' WHERE order_ID='".$_GET['orderID']."'";
 $resultSet1 = mysqli_query($db, $query1);
+
+echo "<script type='text/javascript'>
+    alert('Scheduled Successfully');
+    location.replace('http://localhost/FreshFlora_SCM/admin/schedule_orders.php');
+</script>";
 ?>
