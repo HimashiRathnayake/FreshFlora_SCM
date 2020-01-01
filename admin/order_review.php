@@ -3,7 +3,7 @@
 <?php  
  $connect = mysqli_connect("localhost", "root", "", "db_scm");  
  $query = "SELECT product_name, sum(quantity_ordered) as number FROM order_details, product where product.product_ID = order_details.product_ID GROUP BY order_details.product_ID order by number DESC";  
- $mpp = "SELECT most_popular_product()";
+ $mpp = "SELECT mmost_ordered_product()";
  $result = mysqli_query($connect, $query); 
  $res = mysqli_query($connect, $mpp);
  $row = mysqli_fetch_array($res);
