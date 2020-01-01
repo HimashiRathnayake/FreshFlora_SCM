@@ -38,7 +38,7 @@ if(isset($_POST['submit']) )
       
       $Email=$_POST['Email'];
       $Password=$_POST['Password'];
-
+      $Password=md5(Password);
       
 
     
