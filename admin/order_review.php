@@ -28,7 +28,8 @@
                           ?>  
                      ]);  
                 var options = {  
-                      title: 'Percentage of ordered products',  
+                      title: 'Percentage of ordered products', 
+                      backgroundColor: '#ffe6e6',
                       is3D:true,  
                       pieHole: 0  
                      };  
@@ -44,7 +45,7 @@
            <div style="width:1000px;">  
                 <h1 align="center" style = color :"pink;>Summary of orders by products</h1>  
                 <br />  
-                <div id="piechart" style="width: 900px; height: 750px;"></div>  
+                <div id="piechart" style="width: 800px; height: 750px;"></div>  
            </div> 
 
 		   
