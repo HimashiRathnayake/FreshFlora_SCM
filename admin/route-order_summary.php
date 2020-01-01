@@ -16,7 +16,7 @@
 	?>
 	
 	<tr>
-	<td><?php echo $value["city"]+"-"+$value["destination"]; ?></td>
+	<td><?php echo $value["city"]."-".$value["destination"]; ?></td>
 	<td><?php echo $value["number"]; ?></td>
 	</tr>
 	<?php 
