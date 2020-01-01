@@ -30,7 +30,8 @@
                           ?>  
                      ]);  
                 var options = {  
-                      title: 'Percentage of ordered products', 
+                      title: 'Percentage of ordered products',
+                      //background: url(frame7.jpg) no-repeat center center fixed, 
                       backgroundColor: '#f5f5f0',
                       is3D:true,  
                       pieHole: 0  
@@ -46,7 +47,7 @@
            <br /><br />  
            <div style="width:1000px;">  
                 <h1 style = "color :#99004d"; align="center" >Summary of orders by products</h1>
-                <h4 style = "color :#4d0026"> Most ordered product : <?php echo $pname;?></h4>   
+                <h4 style = "color :#99004d"> Most ordered product : <?php echo $pname;?></h4>   
                 <br />  
                 <div id="piechart" style="width: 800px; height: 750px;"></div>  
            </div> 
