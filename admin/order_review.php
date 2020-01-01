@@ -5,7 +5,8 @@
  $query = "SELECT product_name, sum(quantity_ordered) as number FROM order_details, product where product.product_ID = order_details.product_ID GROUP BY order_details.product_ID order by number DESC";  
  $mpp = "SELECT most_popular_product";
  $result = mysqli_query($connect, $query); 
- $res = mysqli_query($connect, $mpp); 
+ $res = mysqli_query($connect, $mpp);
+ $row = mysqli_fetch_array($res);
  ?>  
  <!DOCTYPE html>  
  <html>  
@@ -45,7 +46,7 @@
            <br /><br />  
            <div style="width:1000px;">  
                 <h1 style = color :"pink; align="center" >Summary of orders by products</h1>
-                <h4> Most ordered product : <?php echo $res;?></h5>   
+                <h4> Most ordered product : <?php echo $row;?></h5>   
                 <br />  
                 <div id="piechart" style="width: 800px; height: 750px;"></div>  
            </div> 
