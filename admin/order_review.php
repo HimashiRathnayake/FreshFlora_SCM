@@ -29,7 +29,7 @@
                      ]);  
                 var options = {  
                       title: 'Percentage of ordered products',  
-                      //is3D:true,  
+                      is3D:true,  
                       pieHole: 0  
                      };  
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
@@ -42,7 +42,7 @@
       <body>  
            <br /><br />  
            <div style="width:1000px;">  
-                <h1 align="center" style = color :'pink;'>Summary of orders by products</h1>  
+                <h1 align="center" style = color :"pink;>Summary of orders by products</h1>  
                 <br />  
                 <div id="piechart" style="width: 900px; height: 750px;"></div>  
            </div> 
