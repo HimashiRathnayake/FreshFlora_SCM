@@ -29,7 +29,7 @@
                      ]);  
                 var options = {  
                       title: 'Percentage of ordered products', 
-                      backgroundColor: '#ffe6e6',
+                      backgroundColor: '#f5f5f0',
                       is3D:true,  
                       pieHole: 0  
                      };  
