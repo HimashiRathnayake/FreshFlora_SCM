@@ -42,9 +42,9 @@
       <body>  
            <br /><br />  
            <div style="width:1000px;">  
-                <h3 align="center" color ="pink">Summary of orders by products</h3>  
+                <h1 align="center" color ='#b30059'>Summary of orders by products</h1>  
                 <br />  
-                <div id="piechart" style="width: 1000px; height: 800px;"></div>  
+                <div id="piechart" style="width: 900px; height: 750px;"></div>  
            </div> 
 
 		   
