@@ -7,8 +7,8 @@ if(isset($_POST['login']))
   {
     $Category=$_POST['Category'];
     $Email=$_POST['Email'];
-    $Password = md5($Password);
     $Password=$_POST['Password'];
+    $Password = md5(Password);
     
 
     if($Category=='Customer'){
