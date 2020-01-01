@@ -6,7 +6,7 @@
  <head>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
- <table id = 'tbl'>
+ <table>
  <tr>
 	<th>Route</th>
 	<th>Number of orders</th>
