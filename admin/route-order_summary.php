@@ -11,6 +11,7 @@
 	<th>Route</th>
 	<th>Number of orders</th>
 	</tr>
+ 
  <?php foreach ($result as $value){
 	?>
 	
