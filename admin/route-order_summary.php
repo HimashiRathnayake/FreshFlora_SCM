@@ -1,6 +1,6 @@
 <?php  
  $connect = mysqli_connect("localhost", "root", "", "db_scm");  
- $query = "SELECT destination, city, count(distinct order_ID) as number FROM customer natural join orders natural join order_details natural join store_route natural join route_area natural join store group by route_ID order by number DESC";  
+ $query =  "SELECT destination,city, count(distinct order_ID) as number from orders natural join order_details natural join customer natural join route natural join route area natural join store_route natural join store group by route_ID order by route_ID" ; 
  $result = mysqli_query($connect, $query); 
  ?>
  <head>
