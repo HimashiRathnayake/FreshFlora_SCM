@@ -7,8 +7,13 @@
             {
                 border: 1px solid black;
             }
+			body
+			{
+				background: url(img/back3.jpg);
+				font-size: 150%;
+			}
         </style>
-		<h3 align="center" style="color: Black; padding-top: 2%">Fresh Flora Quarterly Sales Report</h3>
+		<h2 align="center" style="color: Black; padding-top: 2%">Fresh Flora Quarterly Sales Report</h2>
     </head>
     <body>
         
