@@ -62,9 +62,10 @@ function clearText(field)
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="products.php">Products</a></li>
-                <li><a href="signin.php">Sign in</a></li>	
-				<li><a href="login.php">Log in</a></li>
+                <li><a href="products.php" class='selected'>Products</a></li>
+                <li><a href="freshfloraProjectlogin/customerregistration.php">Sign in</a></li>	
+				<li><a href="freshfloraProjectlogin/freshfloraUserLogin.php">Log in</a></li>
+                
             </ul>
             <div id="templatemo_search">
                 <form action="products.php" method="POST">

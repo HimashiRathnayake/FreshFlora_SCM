@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if (!isset($_SESSION['uid'])){
-    header('Location:http://localhost/FreshFlora_SCM/codes/index.html');
+    header('Location:http://localhost/FreshFlora_SCM/common_user/home.php');
 }
 ?>
 <!-- templatemo 385 floral shop -->
