@@ -71,3 +71,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+
+tbl{
+opacity: 0.97;
+}

@@ -6,7 +6,7 @@
  <head>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
- <table opacity = "0.97">
+ <table id = 'tbl'>
  <tr>
 	<th>Route</th>
 	<th>Number of orders</th>
