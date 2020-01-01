@@ -10,7 +10,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<style>
+   body { 
+  background: url(images/bkg/him1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} 
+</style>
 <?php include_once("./templates/header.php"); ?>
 
 <div class="container">
