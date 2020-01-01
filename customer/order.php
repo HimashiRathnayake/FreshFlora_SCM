@@ -6,7 +6,7 @@ require ('includes/sidebar.php');
 if (isset($_SESSION['cart'])){
     $total=0;
     foreach ($_SESSION['cart'] as $key => $value) {
-        $total+=$value['selling_price'];
+        $total+=$value['selling_price']*$value['quantity'];
     }
 ?>
 <div id="content" class="right">

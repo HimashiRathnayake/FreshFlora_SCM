@@ -4,7 +4,7 @@ $db=require_once("includes/dbConfig.php");
 
 $total=0;
 foreach ($_SESSION['cart'] as $key => $value) {
-    $total+=$value['selling_price'];
+    $total+=$value['selling_price']*$value['quantity'];
 
 }
 
